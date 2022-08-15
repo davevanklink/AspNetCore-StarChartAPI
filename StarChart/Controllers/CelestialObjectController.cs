@@ -3,15 +3,14 @@ using StarChart.Data;
 
 namespace StarChart.Controllers
 {
+    [Route("")]
     public class CelestialObjectController : ControllerBase
     {
-        private ApplicationDbContext _context { get; set; }
-
-        //[Route("")]
+        private readonly ApplicationDbContext _context;
 
         public CelestialObjectController(ApplicationDbContext context)
         {
-            this._context = context;
+            _context = context;
         }
     }
 }
